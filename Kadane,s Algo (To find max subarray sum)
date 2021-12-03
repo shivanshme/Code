@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,a;
+	cin>>n;
+	vector<int> vec ;
+	for(int i=0;i<n;i++)
+	{
+	    cin>>a;
+	    vec.push_back(a);
+	}
+	int currentSum=vec[0];
+	int maxSum=vec[0];
+	for(int i=0;i<n;i++)
+	{ 
+	    currentSum=max(vec[i],currentSum+vec[i]);
+	    maxSum=max(currentSum,maxSum);
+	 }
+	 cout<<maxSum;  //max sum subarray 
+return 0;
+}
